@@ -25,26 +25,51 @@ function updateCountdown() {
 const countdownTimer = setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Email Subscription Form
-document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+// Email Subscription Form with Getform Integration
+document.getElementById('subscribe-form').addEventListener('submit', async function (e) {
     e.preventDefault();
-    
-    const email = document.getElementById('email').value;
-    // Here you would typically send this to your backend
-    console.log('Subscription request:', email);
-    
-    // Show success message
+
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
     const button = this.querySelector('button');
     const originalText = button.textContent;
-    button.textContent = 'Subscribed!';
-    button.style.backgroundColor = 'var(--secondary-color)';
+    const form = this;
     
-    setTimeout(() => {
-        button.textContent = originalText;
-        button.style.backgroundColor = 'var(--primary-color)';
-        this.reset();
-    }, 3000);
+    if (!email) {
+        alert('Please enter a valid email address.');
+        return;
+    }
+
+    const formData = new FormData(form); // Capture form data
+    const action = form.getAttribute("action"); // Get Getform endpoint
+
+    try {
+        const response = await fetch(action, {
+            method: "POST",
+            body: formData,
+        });
+
+        if (response.ok) {
+            console.log('Subscription successful:', email);
+
+            // Show success message
+            button.textContent = 'Subscribed!';
+            button.style.backgroundColor = 'var(--secondary-color)';
+
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.backgroundColor = 'var(--primary-color)';
+                form.reset(); // Clear the form
+            }, 3000);
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Submission failed. Please check your internet connection.");
+    }
 });
+
 
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
