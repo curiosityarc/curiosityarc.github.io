@@ -11,6 +11,117 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- AOS Library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .project-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        
+        .project-hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(25, 162, 74, 0.85), 
+                rgba(25, 162, 74, 0.7),
+                rgba(8, 68, 127, 0.6)
+            );
+            z-index: 1;
+        }
+
+        .project-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #19A24A;
+        }
+
+        .project-content {
+            position: relative;
+            background: #fff;
+            margin-top: -50px;
+            border-radius: 20px 20px 0 0;
+            padding-top: 3rem !important;
+        }
+
+        .get-involved {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .get-involved::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #08447F, #19A24A);
+            opacity: 0.1;
+        }
+
+        .btn-primary {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .project-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .project-details ul li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-details ul li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #19A24A;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -21,65 +132,50 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto text-center text-white">
-                    <h1 class="mb-4">High Resolution Weather Project</h1>
-                    <p class="lead">Installing Automatic Weather Stations in villages for better local forecasting</p>
+                <div class="col-lg-8 mx-auto text-center text-white" data-aos="fade-up">
+                    <h1 class="display-4 mb-4 fw-bold">High Resolution Weather Project</h1>
+                    <p class="lead fs-3">Installing Automatic Weather Stations in villages for better local forecasting</p>
+                    <a href="#project-content" class="btn btn-outline-light btn-lg mt-4">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Project Details -->
-    <section class="project-content py-5">
+    <section id="project-content" class="project-content py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-10 mx-auto">
                     <div class="project-details">
-                        <h2 class="mb-4">Project Overview</h2>
-                        <p>The High Resolution Weather Project aims to revolutionize local weather forecasting by installing a network of Automatic Weather Stations (AWS) across rural villages. This initiative bridges the gap in meteorological data collection and provides accurate, localized weather information to farming communities.</p>
-
-                        <h3 class="mt-5 mb-3">Key Features</h3>
-                        <ul>
-                            <li>Real-time weather data collection</li>
-                            <li>High-precision sensors for temperature, humidity, rainfall, and wind measurements</li>
-                            <li>Solar-powered autonomous operation</li>
-                            <li>Mobile app integration for farmers</li>
-                            <li>Early warning system for extreme weather events</li>
-                        </ul>
-
-                        <h3 class="mt-5 mb-3">Impact</h3>
-                        <div class="impact-stats row text-center my-4">
-                            <div class="col-md-4">
-                                <h4>50+</h4>
-                                <p>Weather Stations Installed</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>10,000+</h4>
-                                <p>Farmers Benefited</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h4>85%</h4>
-                                <p>Forecast Accuracy</p>
-                            </div>
+                        <div class="text-center mb-5" data-aos="fade-up">
+                            <h2 class="display-5 mb-4">Project Overview</h2>
+                            <p class="lead">The High Resolution Weather Project aims to revolutionize local weather forecasting by installing a network of Automatic Weather Stations (AWS) across rural villages. This initiative bridges the gap in meteorological data collection and provides accurate, localized weather information to farming communities.</p>
                         </div>
 
-                        <h3 class="mt-5 mb-3">Technology Stack</h3>
-                        <p>Our weather stations utilize cutting-edge technology:</p>
-                        <ul>
-                            <li>IoT sensors for environmental monitoring</li>
-                            <li>LoRaWAN network for long-range data transmission</li>
-                            <li>Cloud-based data processing and analytics</li>
-                            <li>Machine learning for forecast optimization</li>
-                        </ul>
-
-                        <h3 class="mt-5 mb-3">Future Plans</h3>
-                        <p>We are working to expand the network of weather stations and enhance our forecasting capabilities through:</p>
-                        <ul>
-                            <li>Integration with satellite data</li>
-                            <li>Advanced AI-powered prediction models</li>
-                            <li>Expanded mobile app features</li>
-                            <li>Community training programs</li>
-                        </ul>
+                        <div class="row mt-5">
+                            <div class="col-lg-6" data-aos="fade-up">
+                                <div class="feature-card">
+                                    <h3 class="mb-4">Key Features</h3>
+                                    <ul>
+                                        <li>Real-time weather data collection</li>
+                                        <li>High-precision sensors for temperature, humidity, rainfall, and wind measurements</li>
+                                        <li>Mobile app integration for farmers</li>
+                                        <li>Early warning system for extreme weather events</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                                <div class="feature-card">
+                                    <h3 class="mb-4">Future Plans</h3>
+                                    <p>We will work towards establishing a model and look to expand the network of weather stations across the country with a public-private partnership.</p>
+                                    <ul>
+                                        <li>Open source hardware and software</li>
+                                        <li>Open specifications</li>
+                                        <li>Enable weather research</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,9 +183,9 @@
     </section>
 
     <!-- Get Involved Section -->
-    <section class="get-involved bg-light py-5">
+    <section class="get-involved py-5" data-aos="fade-up">
         <div class="container text-center">
-            <h2 class="mb-4">Get Involved</h2>
+            <h2 class="display-6 mb-4">Get Involved</h2>
             <p class="lead mb-4">Join us in revolutionizing weather forecasting for rural communities</p>
             <a href="../join-the-arc" class="btn btn-primary btn-lg">Contact Us</a>
         </div>
