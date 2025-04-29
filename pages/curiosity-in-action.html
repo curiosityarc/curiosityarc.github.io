@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity in Action - Curiosity Arc Foundation</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/curiosity-in-action.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white d-flex align-items-center" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4 mb-4">Fueling innovation through research and action</h1>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Advancing technology research that creates sustainable solutions and drives India's development forward.
+            </p>
+            <a href="./join-the-arc" class="btn btn-success btn-lg" data-aos="zoom-in" data-aos-delay="400">
+                Join Our Research Team
+            </a>
+        </div>
+    </section>
+
+    <!-- Ongoing Research Initiatives -->
+    <section class="research-initiatives py-5">
+        <div class="container">
+            <h2 class="text-center mb-5" data-aos="fade-up">Ongoing Research Initiatives</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="project-card">
+                        <a href="./projects/weather-project" class="card-inner">
+                            <img src="../assets/images/weather-stations.jpg" alt="High Resolution Weather Project">
+                            <span class="learn-more">
+                                <span class="desktop-text">Hover</span>
+                                <span class="mobile-text">Tap</span>
+                            </span>
+                            <div class="overlay">
+                                <h3>High Resolution Weather Project</h3>
+                                <p>Installing Automatic Weather Stations in villages for better local forecasting.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <a href="./projects/sustainable-agriculture" class="card-inner">
+                            <img src="../assets/images/sustainable-agriculture.jpg" alt="Sustainable Agriculture">
+                            <span class="learn-more">
+                                <span class="desktop-text">Hover</span>
+                                <span class="mobile-text">Tap</span>
+                            </span>
+                            <div class="overlay">
+                                <h3>Sustainable Agriculture</h3>
+                                <p>Model farms using hyperspectral imaging and precision agriculture techniques.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card">
+                        <a href="./projects/climate-map" class="card-inner">
+                            <img src="../assets/images/climate-map.jpg" alt="World Climate Map">
+                            <span class="learn-more">
+                                <span class="desktop-text">Hover</span>
+                                <span class="mobile-text">Tap</span>
+                            </span>
+                            <div class="overlay">
+                                <h3>World Climate Map</h3>
+                                <p>Open source AI portal for interactive climate education and visualization.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Research Directions -->
+    <section class="future-research py-5 bg-light">
+        <div class="container position-relative">
+            <h2 class="text-center mb-5" data-aos="fade-up">Future Research Directions</h2>
+            <div class="scroll-indicator scroll-left" onclick="scrollResearch('left')">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="scroll-indicator scroll-right" onclick="scrollResearch('right')">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="research-row">
+                <div class="research-card" data-aos="fade-up">
+                    <div class="research-focus">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-temperature-high"></i>
+                        </div>
+                        <h4>Climate Change Impact & Response</h4>
+                        <p>Research on climate adaptation and mitigation strategies</p>
+                    </div>
+                </div>
+                <div class="research-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="research-focus">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-droplet"></i>
+                        </div>
+                        <h4>Natural Resource Conservation</h4>
+                        <p>Innovative solutions for preserving and managing natural resources</p>
+                    </div>
+                </div>
+                <div class="research-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="research-focus">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-house-signal"></i>
+                        </div>
+                        <h4>Rural Technology Empowerment</h4>
+                        <p>Technology solutions for rural development and empowerment</p>
+                    </div>
+                </div>
+                <div class="research-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="research-focus">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4>Permaculture</h4>
+                        <p>Sustainable agricultural systems and ecological design</p>
+                    </div>
+                </div>
+                <div class="research-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="research-focus">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h4>Curious Souls</h4>
+                        <p>Research competitions and workshops to nurture young scientific minds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta text-center py-5">
+        <div class="container">
+            <h2 class="mb-4" data-aos="fade-up">Be Part of Our Research Journey</h2>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Join us in advancing technology research and creating sustainable solutions for India.
+            </p>
+            <a href="./join-the-arc" class="btn btn-lg btn-primary" data-aos="zoom-in" data-aos-delay="400">
+                Join the Arc
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Load header and footer
+            $("#header").load("../partials/header.html");
+            $("#footer").load("../partials/footer.html");
+            
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+
+    function scrollResearch(direction) {
+        const container = document.querySelector('.future-research .research-row');
+        const scrollAmount = 300; // Width of one card
+        if (direction === 'left') {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        } else {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    }
+    </script>
+</body>
+</html>

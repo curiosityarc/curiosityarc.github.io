@@ -1,0 +1,350 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/chronicles-hero.jpg') center/cover no-repeat;
+    height: 50vh;
+    min-height: 300px;
+}
+
+/* Navigation Tabs */
+.content-nav {
+    border-bottom: 1px solid #e9ecef;
+    background: #fff;
+}
+
+.nav-pills .nav-link {
+    color: #495057;
+    padding: 1rem 2rem;
+    margin: 0 0.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #f8f9fa;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #08447F;
+    color: white;
+}
+
+/* Publications Section */
+.publication-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+}
+
+.publication-type {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    background: #e9ecef;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.featured-publication {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Section */
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card .card-body {
+    padding: 1.5rem;
+}
+
+.blog-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #08447F;
+}
+
+.featured-blog-post {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-blog-content {
+    padding: 2rem;
+}
+
+/* News & Events Section */
+.event-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-date {
+    background: #08447F;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-right: 1.5rem;
+    min-width: 80px;
+}
+
+.event-date .day {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+}
+
+.event-date .month {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.event-details {
+    flex: 1;
+}
+
+.event-details h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #08447F;
+}
+
+.location {
+    color: #6c757d;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.location i {
+    margin-right: 0.5rem;
+}
+
+/* News Timeline */
+.news-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.news-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+}
+
+.news-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #dee2e6;
+}
+
+.news-item::after {
+    content: '';
+    position: absolute;
+    left: -2.35rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #19A24A;
+    border: 3px solid white;
+}
+
+.news-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.news-content {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #08447F;
+}
+
+/* Publications & Reports Section */
+.upcoming-reports-message {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+.upcoming-reports-message .section-title {
+    color: #08447F;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.upcoming-reports-message .lead {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.upcoming-topics {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.upcoming-topics li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    color: #555;
+}
+
+.upcoming-topics li:before {
+    content: "•";
+    color: #19A24A;
+    font-weight: bold;
+    position: absolute;
+    left: -1.5rem;
+}
+
+.publications-placeholder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.publications-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.publications-placeholder:hover img {
+    transform: scale(1.05);
+}
+
+.placeholder-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 68, 127, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.placeholder-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.placeholder-overlay p {
+    font-size: 1.1rem;
+    max-width: 80%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .upcoming-reports-message {
+        margin-bottom: 2rem;
+    }
+    
+    .publications-placeholder {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .upcoming-reports-message {
+        padding: 1.5rem;
+    }
+    
+    .upcoming-reports-message .lead {
+        font-size: 1.1rem;
+    }
+    
+    .placeholder-overlay h3 {
+        font-size: 1.5rem;
+    }
+    
+    .placeholder-overlay p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .nav-pills .nav-link {
+        padding: 0.75rem 1rem;
+        margin: 0 0.25rem;
+        font-size: 0.875rem;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .featured-blog-content {
+        padding: 1.5rem;
+    }
+} 

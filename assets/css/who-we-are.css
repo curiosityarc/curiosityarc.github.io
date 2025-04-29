@@ -1,0 +1,253 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/who-we-are-hero.jpg') center/cover no-repeat;
+    height: 60vh;
+    min-height: 400px;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Our Story Section */
+.our-story {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+}
+
+.section-title {
+    color: #08447F;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #19A24A;
+    margin-top: 1rem;
+}
+
+.section-title.text-center::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.story-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.story-highlight {
+    font-size: 1.25rem;
+    color: #08447F;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid #08447F;
+}
+
+.story-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-image img {
+    transition: transform 0.5s ease;
+}
+
+.story-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Vision & Mission Cards */
+.vision-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.icon-wrapper i {
+    font-size: 1.75rem;
+    color: #08447F;
+    transition: all 0.3s ease;
+}
+
+.vision-card h3 {
+    color: #08447F;
+    margin-bottom: 1rem;
+}
+
+.vision-points {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5rem;
+}
+
+.vision-points li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.vision-points li::before {
+    content: "→";
+    color: #19A24A;
+    position: absolute;
+    left: 0;
+}
+
+/* Core Values */
+.value-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.value-card .icon-wrapper {
+    margin: 0 auto 1.5rem;
+}
+
+.value-card h4 {
+    color: #08447F;
+    margin-bottom: 1rem;
+}
+
+.value-card:hover .icon-wrapper {
+    background: #08447F;
+    transform: translateY(-5px);
+}
+
+.value-card:hover .icon-wrapper i {
+    color: white;
+}
+
+/* Call to Action */
+.cta {
+    background: linear-gradient(135deg, #08447F, #19A24A);
+    color: white;
+}
+
+.cta .btn-primary {
+    background-color: white;
+    color: #08447F;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa;
+}
+
+/* SDG Cards */
+.sdg-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sdg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.sdg-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sdg-header .sdg-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.sdg-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.sdg-card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .impact-card h3 {
+        font-size: 2.5rem;
+    }
+
+    .vision-card,
+    .value-card,
+    .impact-card {
+        margin-bottom: 1.5rem;
+    }
+} 

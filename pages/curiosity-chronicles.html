@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosity Chronicles - Curiosity Arc Foundation</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/curiosity-chronicles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white d-flex align-items-center" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4 mb-4">Curiosity Chronicles</h1>
+            <p class="lead mb-4">Exploring the intersection of research, innovation, and impact</p>
+        </div>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <section class="content-nav py-4">
+        <div class="container">
+            <ul class="nav nav-pills justify-content-center" id="chroniclesTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="blog-tab" data-bs-toggle="pill" data-bs-target="#blog" type="button" role="tab" aria-controls="blog" aria-selected="true">Blog</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="news-tab" data-bs-toggle="pill" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="false">News & Events</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="publications-tab" data-bs-toggle="pill" data-bs-target="#publications" type="button" role="tab" aria-controls="publications" aria-selected="false">Publications & Reports</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content-section py-5">
+        <div class="container">
+            <div class="tab-content" id="chroniclesTabContent">
+                <!-- Blog Tab -->
+                <div class="tab-pane fade show active" id="blog" role="tabpanel" aria-labelledby="blog-tab">
+                    <div class="row g-4" id="blogPosts">
+                        <!-- Posts will be loaded dynamically -->
+                        <div class="col-12 text-center" id="loading">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News & Events Tab -->
+                <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
+                    <!-- Upcoming Events -->
+                    <div class="upcoming-events mb-5" data-aos="fade-up">
+                        <h2 class="section-title">Upcoming Events</h2>
+                        <div class="text-center p-4 bg-light rounded">
+                            <i class="fas fa-calendar fa-3x mb-3 text-primary"></i>
+                            <h3>Stay Tuned for Upcoming Events</h3>
+                            <p class="lead mb-4">We're planning exciting events and workshops. Subscribe to our newsletter to be notified when new events are announced.</p>
+                            <a href="https://curiosityarc.substack.com" class="btn btn-primary" target="_blank">Subscribe for Updates</a>
+                        </div>
+
+                        <!-- Event Card Template (Commented for future use)
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="event-card">
+                                    <div class="event-date">
+                                        <span class="day">15</span>
+                                        <span class="month">APR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h3>Tech Innovation Summit 2024</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore</p>
+                                        <p>Annual gathering of technology innovators and researchers.</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Register Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="event-card">
+                                    <div class="event-date">
+                                        <span class="day">20</span>
+                                        <span class="month">APR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h3>Rural Tech Workshop</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Chennai</p>
+                                        <p>Hands-on workshop on implementing rural technology solutions.</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Register Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="event-card">
+                                    <div class="event-date">
+                                        <span class="day">25</span>
+                                        <span class="month">APR</span>
+                                    </div>
+                                    <div class="event-details">
+                                        <h3>Sustainability Conference</h3>
+                                        <p class="location"><i class="fas fa-map-marker-alt"></i> Delhi</p>
+                                        <p>Conference focusing on sustainable technology solutions.</p>
+                                        <a href="#" class="btn btn-outline-primary btn-sm">Register Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+
+                    <!-- Latest News -->
+                    <div class="latest-news" data-aos="fade-up">
+                        <h2 class="section-title">Latest News</h2>
+                        <div class="news-timeline">
+                            <div class="news-item">
+                                <div class="news-date">April 30, 2025</div>
+                                <div class="news-content">
+                                    <h3>Curiosity Arc Foundation Launches High Reslution Weather pilot project</h3>
+                                    <p>An initiative to provide high resolution weather data to farmers in India</p>
+                                    <a href="https://curiosityarc.substack.com/p/why-do-we-need-high-density-weather" class="btn btn-link">Read More →</a>
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-date">February 25, 2025</div>
+                                <div class="news-content">
+                                    <h3>Curiosity Arc Foundation Officially Registered</h3>
+                                    <p>A significant milestone as the foundation receives official registration, marking the formal beginning of our journey to drive technological innovation and research for societal impact in India.</p>
+                                    <a href="#" class="btn btn-link">Read More →</a>
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-date">January 26, 2025</div>
+                                <div class="news-content">
+                                    <h3>Curiosity Arc Foundation Established</h3>
+                                    <p>On India's 76th Republic Day, we are proud to announce the establishment of Curiosity Arc Foundation, with a vision to accelerate India's technological advancement through research, innovation, and impactful solutions.</p>
+                                    <a href="#" class="btn btn-link">Read More →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications & Reports Tab -->
+                <div class="tab-pane fade" id="publications" role="tabpanel" aria-labelledby="publications-tab">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="upcoming-reports-message" data-aos="fade-up">
+                                <h2 class="section-title">Publications & Reports</h2>
+                                <p class="lead">Our research publications and reports will be available here soon.</p>
+                                <p>We are currently working on several research papers and reports that will be published in the coming months. These publications will cover topics such as:</p>
+                                <ul class="upcoming-topics">
+                                    <li>Sustainable technology solutions for rural India</li>
+                                    <li>Innovation in healthcare delivery systems</li>
+                                    <li>Digital literacy initiatives and their impact</li>
+                                    <li>Climate change adaptation strategies</li>
+                                </ul>
+                                <p>Check back regularly for updates or subscribe to our newsletter to be notified when new publications are available.</p>
+                                <a href="./join-the-arc#newsletter" class="btn btn-primary mt-3">Subscribe for Updates</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="publications-placeholder text-center p-5 bg-light rounded" data-aos="fade-up" data-aos-delay="200">
+                                <i class="fas fa-book-reader fa-5x mb-4 text-primary"></i>
+                                <h3>Coming Soon</h3>
+                                <p class="lead">Our research publications will be available here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/curiosity-chronicles.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Load header and footer
+            $("#header").load("../partials/header.html");
+            $("#footer").load("../partials/footer.html");
+        });
+    </script>
+</body>
+</html>

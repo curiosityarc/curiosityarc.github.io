@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Climate Map - Curiosity Arc Foundation</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero" style="background-image: url('../../assets/images/climate-map.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="mb-4">World Climate Map</h1>
+                    <p class="lead">Open source AI portal for interactive climate education and visualization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-content py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="project-details">
+                        <h2 class="mb-4">Project Overview</h2>
+                        <p>The World Climate Map project is an innovative open-source platform that combines artificial intelligence with climate data to create interactive educational experiences. Our goal is to make complex climate science accessible and engaging for everyone, from students to policymakers.</p>
+
+                        <h3 class="mt-5 mb-3">Platform Features</h3>
+                        <ul>
+                            <li>Interactive 3D globe visualization</li>
+                            <li>Real-time climate data integration</li>
+                            <li>Historical climate pattern analysis</li>
+                            <li>Future climate scenario modeling</li>
+                            <li>Educational resources and lesson plans</li>
+                        </ul>
+
+                        <h3 class="mt-5 mb-3">Technology Stack</h3>
+                        <div class="tech-stack row text-center my-4">
+                            <div class="col-md-3">
+                                <i class="fas fa-brain fa-2x mb-3"></i>
+                                <h5>AI/ML</h5>
+                                <p>Predictive Modeling</p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fas fa-globe fa-2x mb-3"></i>
+                                <h5>WebGL</h5>
+                                <p>3D Visualization</p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fas fa-database fa-2x mb-3"></i>
+                                <h5>Big Data</h5>
+                                <p>Climate Analytics</p>
+                            </div>
+                            <div class="col-md-3">
+                                <i class="fas fa-cloud fa-2x mb-3"></i>
+                                <h5>Cloud</h5>
+                                <p>Scalable Infrastructure</p>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-5 mb-3">Educational Impact</h3>
+                        <ul>
+                            <li>Used in over 1000 schools worldwide</li>
+                            <li>Integration with university research programs</li>
+                            <li>Support for citizen science initiatives</li>
+                            <li>Collaboration with climate scientists</li>
+                        </ul>
+
+                        <h3 class="mt-5 mb-3">Open Source Community</h3>
+                        <p>Join our growing community of contributors:</p>
+                        <ul>
+                            <li>Code contributions welcome</li>
+                            <li>Documentation and translation support</li>
+                            <li>Data validation and verification</li>
+                            <li>Educational content development</li>
+                        </ul>
+
+                        <div class="github-cta text-center my-5">
+                            <a href="https://github.com/curiosityarc/open-climate-map" class="btn btn-dark btn-lg">
+                                <i class="fab fa-github me-2"></i>View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Get Involved</h2>
+            <p class="lead mb-4">Help us make climate education accessible to everyone</p>
+            <a href="../join-the-arc" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#header").load("/partials/header.html", function() {
+                // After loading header, update active state
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="/pages/curiosity-in-action"]').addClass('active');
+            });
+            $("#footer").load("/partials/footer.html");
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+    </script>
+</body>
+</html> 

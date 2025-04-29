@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Join the Arc - Curiosity Arc Foundation</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/join-the-arc.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white d-flex align-items-center" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4 mb-4">Join the Arc</h1>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                Be part of our mission to advance technology research and create sustainable solutions for India
+            </p>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Get Involved</h2>
+            <div class="row g-4">
+                <!-- Sponsor a Project -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="involvement-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Sponsor a Project</h3>
+                        <p>Fund groundbreaking research initiatives that align with your values and vision for India's future.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-involvement="sponsor">Learn More</button>
+                    </div>
+                </div>
+                
+                <!-- Contribute -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="involvement-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Contribute</h3>
+                        <p>Support our mission through donations that help fund research, equipment, and educational programs.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-involvement="contribute">Donate Now</button>
+                    </div>
+                </div>
+                
+                <!-- Submit a Project -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="involvement-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Submit a Project</h3>
+                        <p>Share your innovative research ideas that could create lasting impact in sustainability and technology.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-involvement="submit">Submit</button>
+                    </div>
+                </div>
+                
+                <!-- Partner with Us -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="involvement-card">
+                        <div class="icon-wrapper">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Partner with Us</h3>
+                        <p>Collaborate with us as an organization to drive innovation and create meaningful impact together.</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal" data-involvement="partner">Partner Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Get in Touch</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" class="contact-form" action="https://getform.io/f/akkykloa" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="organization" class="form-label">Organization (Optional)</label>
+                                <input type="text" class="form-control" id="organization" name="organization">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="involvement" class="form-label">How would you like to get involved?</label>
+                                <select class="form-control" id="involvement" name="involvement" required>
+                                    <option value="">Please select...</option>
+                                    <option value="sponsor">Sponsor a Project</option>
+                                    <option value="contribute">Contribute</option>
+                                    <option value="submit">Submit a Project</option>
+                                    <option value="partner">Partner with Us</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-secondary mr-2" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                        <!-- Honeypot field to prevent spam -->
+                        <input type="text" name="_gotcha" style="display:none !important">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stay Updated Section -->
+    <section class="newsletter-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title mb-4">Stay Updated</h2>
+                    <p class="lead mb-4">Subscribe to Curiosity Chronicles for the latest research updates, events, and opportunities.</p>
+                    <form class="newsletter-form" action="https://curiosityarc.substack.com/subscribe" method="GET" target="_blank">
+                        <div class="input-group mb-3">
+                            <input type="email" name="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                        <small class="text-muted">By subscribing, you agree to Substack's Terms of Use and Privacy Policy</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow Us Section -->
+    <section class="social-section py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Follow Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="social-links text-center" data-aos="fade-up">
+                        <a href="https://www.linkedin.com/company/curiosityarc" class="social-link mx-3" title="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://curiosityarc.substack.com" class="social-link mx-3" title="Subscribe to our Substack" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-newspaper"></i>
+                        </a>
+                        <a href="https://www.instagram.com/curiosity.arc" class="social-link mx-3" title="Follow us on Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@CuriosityArc" class="social-link mx-3" title="Subscribe to our YouTube channel" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- jQuery first, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="../assets/js/scripts.js"></script>
+    <script src="../assets/js/join-the-arc.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,100 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Curiosity Arc Foundation - Advancing Research and Driving Innovation in Sustainability and India-impact Technology">
-    <title>Coming Soon | Curiosity Arc Foundation</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Curiosity Arc Foundation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .splash-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        .video-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 aspect ratio */
+            min-height: 100vh;
+            min-width: 177.77vh; /* 16:9 aspect ratio */
+            transform: translate(-50%, -50%);
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="background-gradient"></div>
-    
-    <header class="hero">
-        <nav class="navbar container">
-            <div class="logo">
-                <img src="logo.jpg" alt="Curiosity Arc Foundation" width="180" height="180">
-            </div>
-        </nav>
-        <div class="hero-content container">
-            <h1>Advancing Research, Driving Innovation</h1>
-            <p class="mission-statement">
-                Empowering sustainable technology solutions and fostering innovation 
-                for India's future through collaborative research and strategic partnerships.
-            </p>
+    <div class="splash-container">
+        <div class="video-wrapper">
+            <iframe 
+                id="player"
+                src="https://www.youtube.com/embed/t61I2uM7y5Y?enablejsapi=1&autoplay=1&controls=0&showinfo=0&rel=0&mute=1" 
+                frameborder="0" 
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
         </div>
-    </header>
+    </div>
 
-    <main>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        let player;
+        
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
 
-        <section class="countdown container" id="countdown">
-            <h2>Coming Soon</h2>
-            <div class="countdown-timer">
-                <div class="countdown-item">
-                    <span id="days">00</span>
-                    <label>Days</label>
-                </div>
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <label>Hours</label>
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <label>Minutes</label>
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds">00</span>
-                    <label>Seconds</label>
-                </div>
-            </div>
-        </section>
+        function onPlayerReady(event) {
+            event.target.unMute(); // Unmute once ready
+            event.target.playVideo();
+        }
 
-        <section class="about container" id="about">
-            <h2>About Us</h2>
-            <p>
-                At Curiosity Arc Foundation, we're dedicated to bridging the gap between 
-                cutting-edge research and practical implementation in sustainability and 
-                technology. Our focus areas include renewable energy, sustainable agriculture, 
-                and digital transformation for social impact across India.
-            </p>
-        </section>
-        <section class="stay-updated container" id="subscribe">
-            <h2>Stay Updated</h2>
-            <p>Be the first to know when we launch and receive updates about our initiatives. You can get involved as a researcher, donor  or a partner.</p>
-            <form id="subscribe-form" class="subscribe-form" action="https://getform.io/f/akkykloa" method="POST">
-                <div class="input-group">
-                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-                    <input type="hidden" name="_gotcha" style="display:none !important">
-                    <button type="submit">Subscribe</button>
-                </div>
-            </form>
-        </section>
-    </main>
+        // Wait for 15 seconds before redirecting
+        setTimeout(() => {
+            window.location.href = 'pages/home';
+        }, 15000);
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="contact-info">
-                    <h3>Contact Us</h3>
-                    <p>Location: India</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/curiosityarc/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                        <svg class="social-icon" viewBox="0 0 24 24">
-                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                        </svg>
-                    </a>
-                    <a href="https://instagram.com/curiosity.arc" target="_blank" rel="noopener" aria-label="instagram">
-                        <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0-2A7.75 7.75 0 0 0 0 7.75v8.5A7.75 7.75 0 0 0 7.75 24h8.5A7.75 7.75 0 0 0 24 16.25v-8.5A7.75 7.75 0 0 0 16.25 0zM12 6.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zm0 8.5a3.25 3.25 0 1 1 0-6.5 3.25 3.25 0 0 1 0 6.5zm6-10a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/>
-                        </svg>                     
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+        // Preload home page in the background
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = 'pages/home';
+        document.head.appendChild(link);
+    </script>
 </body>
 </html>

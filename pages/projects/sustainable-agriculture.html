@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Agriculture - Curiosity Arc Foundation</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero" style="background-image: url('../../assets/images/sustainable-agriculture.jpg');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="mb-4">Sustainable Agriculture</h1>
+                    <p class="lead">Model farms using hyperspectral imaging and precision agriculture techniques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-content py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="project-details">
+                        <h2 class="mb-4">Project Overview</h2>
+                        <p>Our Sustainable Agriculture project combines cutting-edge technology with traditional farming wisdom to create model farms that demonstrate the future of agriculture. Through the use of hyperspectral imaging and precision agriculture techniques, we're helping farmers optimize their yields while minimizing environmental impact.</p>
+
+                        <h3 class="mt-5 mb-3">Key Technologies</h3>
+                        <ul>
+                            <li>Hyperspectral imaging for crop health monitoring</li>
+                            <li>IoT sensors for soil and environmental data</li>
+                            <li>Precision irrigation systems</li>
+                            <li>Drone-based crop surveillance</li>
+                            <li>AI-powered yield prediction</li>
+                        </ul>
+
+                        <h3 class="mt-5 mb-3">Impact Metrics</h3>
+                        <div class="impact-stats row text-center my-4">
+                            <div class="col-md-4">
+                                <h4>30%</h4>
+                                <p>Water Usage Reduction</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>25%</h4>
+                                <p>Yield Increase</p>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>40%</h4>
+                                <p>Cost Reduction</p>
+                            </div>
+                        </div>
+
+                        <h3 class="mt-5 mb-3">Implementation Approach</h3>
+                        <p>Our model farms serve as living laboratories and demonstration sites for:</p>
+                        <ul>
+                            <li>Sustainable farming practices</li>
+                            <li>Water conservation techniques</li>
+                            <li>Integrated pest management</li>
+                            <li>Soil health optimization</li>
+                            <li>Climate-resilient agriculture</li>
+                        </ul>
+
+                        <h3 class="mt-5 mb-3">Future Developments</h3>
+                        <p>We are continuously evolving our approach with:</p>
+                        <ul>
+                            <li>Advanced AI models for crop disease prediction</li>
+                            <li>Blockchain for supply chain transparency</li>
+                            <li>Mobile apps for farmer education</li>
+                            <li>Integration with weather forecasting systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section class="get-involved bg-light py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Get Involved</h2>
+            <p class="lead mb-4">Help us transform agriculture for a sustainable future</p>
+            <a href="../join-the-arc" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#header").load("/partials/header.html", function() {
+                // After loading header, update active state
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="/pages/curiosity-in-action"]').addClass('active');
+            });
+            $("#footer").load("/partials/footer.html");
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+    </script>
+</body>
+</html> 

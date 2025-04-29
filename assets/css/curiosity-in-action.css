@@ -1,0 +1,227 @@
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('../images/research-hero.jpg') center/cover no-repeat;
+    height: 60vh;
+    padding: 150px 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Cards */
+.project-card {
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card .card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    color: #08447F;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-card .badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+}
+
+.project-card .progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+}
+
+/* Research Focus Areas */
+.research-focus {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.research-focus:hover {
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+    color: #08447F;
+}
+
+.research-focus h4 {
+    color: #08447F;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.research-focus p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(45deg, #65C13A, #19A24A);
+    color: white;
+}
+
+.cta .btn-primary {
+    background-color: white;
+    color: #19A24A;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta .btn-primary:hover {
+    transform: scale(1.05);
+    background-color: #f8f9fa;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+        padding: 100px 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .research-focus {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Animation Classes */
+[data-aos] {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Future Research Directions */
+.research-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scroll-behavior: smooth;
+    padding: 1rem 0;
+    gap: 30px;
+}
+
+.research-row::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.research-card {
+    flex: 0 0 300px;
+    scroll-snap-align: start;
+}
+
+.research-focus {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.research-focus:hover {
+    transform: translateY(-5px);
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+.scroll-indicator:hover {
+    background: white;
+}
+
+.scroll-indicator i {
+    color: #08447F;
+}
+
+@media (max-width: 768px) {
+    .research-card {
+        flex: 0 0 85%;
+    }
+} 
