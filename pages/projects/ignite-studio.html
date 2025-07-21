@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 <body>
+    <!-- Header -->
+    <div id="header"></div>
 
     <section class="hero-section py-5 text-center bg-dark text-white" data-aos="fade-down">
         <div class="container">
@@ -104,11 +106,28 @@
         </div>
     </section>
 
-    <script src="../../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../../assets/js/scripts.js"></script>
     <script>
-      AOS.init({ duration: 800, once: true });
+        $(document).ready(function() {
+            $("#header").load("/partials/header.html", function() {
+                // After loading header, update active state
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="/pages/curiosity-in-action"]').addClass('active');
+            });
+            $("#footer").load("/partials/footer.html");
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
     </script>
 </body>
 </html>
