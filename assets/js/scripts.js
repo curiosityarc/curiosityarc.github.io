@@ -125,7 +125,7 @@ function openModal(projectId) {
             `;
             break;
         case 'agriculture':
-            title = 'Sustainable Agriculture';
+            title = 'Regenerative Agriculture';
             content = `
                 <div class="project-details">
                     <p>We're establishing model farms that demonstrate how technology can revolutionize agriculture while maintaining sustainability.</p>
